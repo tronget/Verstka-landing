@@ -1,0 +1,115 @@
+.anim {
+  transition: 0.6s ease;
+}
+.anim.about *, .anim.home *, .anim.apps *, .anim.users *, .anim.blog *, .anim.faq *, .anim.start *, .anim.sign-up * {
+  opacity: 0;
+}
+.anim .title {
+  transform: translateY(32px);
+  transition: 0.4s 0.4s;
+}
+.anim .subtitle {
+  transform: translateY(42px);
+  transition: 0.4s 0.8s;
+}
+.anim .text {
+  transform: translateY(52px);
+  transition: 0.4s 1.2s;
+}
+.anim .another-subtitle {
+  transition: 0.4s 0.8s;
+  transform: translateX(60px);
+}
+.anim.home .btn-cont {
+  transform: scale(0);
+  transition: 0.6s 1.6s;
+}
+.anim .btns {
+  transform: translateX(-140px);
+  transition: 0.6s 1.6s;
+}
+.anim.apps .laptop__back,
+.anim.apps .laptop__keyboard {
+  transform: translateY(-80px);
+  transition: 0.7s 2.2s;
+}
+.anim.apps .left-mobile {
+  transition: 0.5s 2.9s;
+}
+.anim.apps .right-mobile {
+  transition: 0.5s 3.2s;
+}
+.anim.about .about__item {
+  transition: 0.8s 1.2s ease;
+}
+.anim.about .about__item:nth-child(odd) {
+  transform: translate(-100px, -200px);
+}
+.anim.about .about__item:nth-child(even) {
+  transform: translate(100px, 200px);
+}
+.anim .users__productivity {
+  transition: 0.8s 0.6s;
+  transform: translateX(-100%);
+}
+.anim .users-count {
+  transition: 0.8s 0.6s;
+  transform: translateX(100%);
+}
+.anim .users__timer img {
+  transition: 1s 1.4s;
+  transform: rotate(210deg);
+}
+.anim .slider {
+  transform: scale(0);
+  transition: 0.6s 1.2s;
+}
+.anim .faq__item {
+  transform: translateX(-200px);
+}
+.anim .faq__item:nth-child(3) {
+  transition: 0.3s;
+  transition-delay: 1.2s;
+}
+.anim .faq__item:nth-child(4) {
+  transition: 0.3s;
+  transition-delay: 1.5s;
+}
+.anim .faq__item:nth-child(5) {
+  transition: 0.3s;
+  transition-delay: 1.8s;
+}
+.anim .faq__item:nth-child(6) {
+  transition: 0.3s;
+  transition-delay: 2.1s;
+}
+.anim .faq__item:nth-child(7) {
+  transition: 0.3s;
+  transition-delay: 2.4s;
+}
+
+.anim-show {
+  transition: 0.6s ease;
+}
+.anim-show.about *, .anim-show.home *, .anim-show.apps *, .anim-show.users *, .anim-show.blog *, .anim-show.faq *, .anim-show.start *, .anim-show.sign-up * {
+  opacity: 1;
+}
+.anim-show .title,
+.anim-show .subtitle,
+.anim-show .text,
+.anim-show .btn-cont,
+.anim-show .btns,
+.anim-show .laptop__back,
+.anim-show .laptop__keyboard,
+.anim-show .another-subtitle,
+.anim-show .btn,
+.anim-show .about__item,
+.anim-show .users__productivity,
+.anim-show .users-count,
+.anim-show .slider,
+.anim-show .faq__item {
+  transform: scale(1) translate(0) rotate(0deg) !important;
+}
+.anim-show .users__timer img {
+  transform: none;
+}

@@ -1,0 +1,122 @@
+.anim {
+   transition: 0.6s ease;
+   &.about,
+   &.home,
+   &.apps,
+   &.users,
+   &.blog,
+   &.faq,
+   &.start,
+   &.sign-up {
+      * {
+         opacity: 0;
+      }
+   }
+   .title {
+      transform: translateY(32px);
+      transition: 0.4s 0.4s;
+   }
+   .subtitle {
+      transform: translateY(42px);
+      transition: 0.4s 0.8s;
+   }
+   .text {
+      transform: translateY(52px);
+      transition: 0.4s 1.2s;
+   }
+   .another-subtitle {
+      transition: 0.4s 0.8s;
+      transform: translateX(60px);
+   }
+   &.home {
+      .btn-cont {
+         transform: scale(0);
+         transition: 0.6s 1.6s;
+      }
+   }
+	.btns {
+         transform: translateX(-140px);
+         transition: 0.6s 1.6s;
+      }
+   &.apps {
+      .laptop__back,
+      .laptop__keyboard {
+         transform: translateY(-80px);
+         transition: 0.7s 2.2s;
+      }
+      .left-mobile {
+         transition: 0.5s 2.9s;
+      }
+      .right-mobile {
+         transition: 0.5s 3.2s;
+      }
+   }
+   &.about {
+      .about__item {
+         transition: 0.8s 1.2s ease;
+      }
+      .about__item:nth-child(odd) {
+         transform: translate(-100px, -200px);
+      }
+      .about__item:nth-child(even) {
+         transform: translate(100px, 200px);
+      }
+   }
+	.users__productivity {
+		transition: .8s .6s;
+		transform: translateX(-100%);
+	}
+	.users-count {
+		transition: .8s .6s;
+		transform: translateX(100%);
+	}
+	.users__timer img {
+		transition: 1s 1.4s;
+		transform: rotate(210deg);
+	}
+	.slider {
+		transform: scale(0);
+		transition: .6s 1.2s;
+	}
+	.faq__item {
+		transform: translateX(-200px);
+	}
+	@for $i from 3 to 8 {
+		.faq__item:nth-child(#{$i}) {
+			transition: .3s;
+			transition-delay: 1.2s + 0.3s * ($i - 3);
+		}
+	}
+}
+.anim-show {
+   transition: 0.6s ease;
+   &.about,
+   &.home,
+   &.apps,
+   &.users,
+   &.blog,
+   &.faq,
+   &.start,
+   &.sign-up {
+      * {
+         opacity: 1;
+      }
+   }
+   .title,
+   .subtitle,
+   .text,
+   .btn-cont,
+   .btns,
+   .laptop__back,
+   .laptop__keyboard,
+   .another-subtitle,
+	.btn,
+	.about__item,
+	.users__productivity,
+	.users-count,
+	.slider,
+	.faq__item {
+      transform: scale(1) translate(0) rotate(0deg) !important;
+   }
+	.users__timer img {transform: none;}
+}
